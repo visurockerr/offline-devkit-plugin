@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevKit</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --panel: #171a23;
+      --panel-2: #1e222d;
+      --border: #2a2f3c;
+      --text: #e6e9ef;
+      --muted: #9aa3b2;
+      --accent: #6ea8fe;
+      --purple: #c084fc;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      width: 760px;
+      height: 560px;
+      font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Top bar */
+    .bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      flex: none;
+      background: var(--bg);
+    }
+    .logo-img {
+      width: 24px; height: 24px;
+      border-radius: 7px;
+      display: block;
+    }
+    .bar h1 { margin: 0; font-size: 14px; font-weight: 700; }
+    .back {
+      display: none;
+      align-items: center;
+      gap: 5px;
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 7px;
+      padding: 5px 10px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    .back:hover { border-color: var(--accent); }
+    .bar .spacer { flex: 1; }
+
+    /* Views */
+    .view { flex: 1; min-height: 0; }
+    #listView {
+      overflow-y: auto;
+      padding: 14px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .tool {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-align: left;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      color: var(--text);
+      padding: 12px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: background .12s ease, border-color .12s ease, transform .12s ease;
+    }
+    .tool:hover { background: var(--panel-2); border-color: var(--accent); transform: translateY(-2px); }
+    .tool .ico { font-size: 18px; width: 22px; text-align: center; }
+    .tool .label { font-weight: 600; }
+    .tool .desc { color: var(--muted); font-size: 11px; font-weight: 400; }
+    .tool .txt { display: flex; flex-direction: column; line-height: 1.3; }
+
+    /* Tool frame */
+    #frameView { display: none; }
+    #frameView.active { display: block; }
+    #listView.hidden { display: none; }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="bar">
+    <button class="back" id="backBtn">← Back</button>
+    <img class="logo-img" id="logoImg" src="icons/icon-48.png" alt="DevKit" />
+    <h1 id="title">DevKit</h1>
+    <span class="spacer"></span>
+  </div>
+
+  <div class="view" id="listView">
+    <div class="grid">
+      <button class="tool" data-page="dev-tools/tools/url-encoder.html" data-title="URL Encoder / Decoder" data-icon="🔗">
+        <span class="ico">🔗</span>
+        <span class="txt"><span class="label">URL Encoder / Decoder</span><span class="desc">Encode & decode URLs</span></span>
+      </button>
+      <button class="tool" data-page="dev-tools/tools/uuid-generator.html" data-title="UUID Generator" data-icon="🆔">
+        <span class="ico">🆔</span>
+        <span class="txt"><span class="label">UUID Generator</span><span class="desc">v4 UUIDs, single or bulk</span></span>
+      </button>
+      <button class="tool" data-page="dev-tools/tools/branch-name.html" data-title="Git Branch Name" data-icon="🌿">
+        <span class="ico">🌿</span>
+        <span class="txt"><span class="label">Git Branch Name</span><span class="desc">Random readable branches</span></span>
+      </button>
+      <button class="tool" data-page="dev-tools/tools/json-pretty.html" data-title="JSON Pretty Print" data-icon="🎨">
+        <span class="ico">🎨</span>
+        <span class="txt"><span class="label">JSON Pretty Print</span><span class="desc">Format & colorize JSON</span></span>
+      </button>
+      <button class="tool" data-page="dev-tools/tools/diff.html" data-title="Diff / Text Compare" data-icon="🔀">
+        <span class="ico">🔀</span>
+        <span class="txt"><span class="label">Diff / Text Compare</span><span class="desc">Side-by-side comparison</span></span>
+      </button>
+      <button class="tool" data-page="dev-tools/tools/json-yaml.html" data-title="JSON ↔ YAML" data-icon="🔄">
+        <span class="ico">🔄</span>
+        <span class="txt"><span class="label">JSON ↔ YAML</span><span class="desc">Convert both ways</span></span>
+      </button>
+      <button class="tool" data-page="dev-tools/tools/password.html" data-title="Password Generator" data-icon="🔑">
+        <span class="ico">🔑</span>
+        <span class="txt"><span class="label">Password Generator</span><span class="desc">Strong random passwords</span></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="view" id="frameView">
+    <iframe id="frame" title="tool"></iframe>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="128" y2="128" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6ea8fe"/>
+      <stop offset="1" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="tool" x1="18" y1="18" x2="110" y2="110" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eef2ff"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Full-bleed rounded gradient tile -->
+  <rect x="0" y="0" width="128" height="128" rx="30" fill="url(#bg)"/>
+  <rect x="0" y="0" width="128" height="128" rx="30" fill="black" opacity="0.04"/>
+
+  <!-- Wrench + angle-bracket "code" motif, scaled to fill the tile -->
+  <!-- Left angle bracket -->
+  <path d="M40 34 L16 64 L40 94" stroke="url(#tool)" stroke-width="11"
+        stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.95"/>
+  <!-- Right angle bracket -->
+  <path d="M88 34 L112 64 L88 94" stroke="url(#tool)" stroke-width="11"
+        stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.95"/>
+  <!-- Center wrench/slash -->
+  <path d="M78 26 L50 102" stroke="url(#tool)" stroke-width="11"
+        stroke-linecap="round" fill="none"/>
+  <!-- Wrench head dot -->
+  <circle cx="80" cy="22" r="9" fill="url(#tool)"/>
+</svg>

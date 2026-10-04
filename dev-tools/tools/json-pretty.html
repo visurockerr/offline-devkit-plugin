@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JSON Pretty Print — Dev Tools</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <a class="back-link" href="../index.html">← All tools</a>
+    <header class="site-header">
+      <div>
+        <h1 class="site-title"><span class="logo">🎨</span> JSON Pretty Print</h1>
+        <p class="subtitle">Format and colorize JSON to make it readable.</p>
+      </div>
+    </header>
+
+    <div class="panel">
+      <label class="field-label" for="input">Paste JSON</label>
+      <textarea id="input" placeholder='{"hello":"world","nums":[1,2,3],"ok":true,"nothing":null}'></textarea>
+      <div class="row">
+        <div class="col" style="flex:0 1 160px;">
+          <label class="field-label" for="indent">Indent</label>
+          <select id="indent">
+            <option value="2">2 spaces</option>
+            <option value="4">4 spaces</option>
+            <option value="tab">Tab</option>
+          </select>
+        </div>
+      </div>
+      <div class="btn-row">
+        <button class="btn" id="formatBtn">Format</button>
+        <button class="btn secondary" id="minifyBtn">Minify</button>
+        <button class="btn secondary" id="copyBtn">📋 Copy</button>
+        <button class="btn secondary" id="clearBtn">Clear</button>
+      </div>
+      <div class="error" id="error"></div>
+    </div>
+
+    <div class="panel">
+      <label class="field-label">Output</label>
+      <pre class="output" id="output" style="margin:0;"></pre>
+    </div>
+  </div>
+
+  <script src="common.js"></script>
+  <script src="json-pretty.js"></script>
+</body>
+</html>

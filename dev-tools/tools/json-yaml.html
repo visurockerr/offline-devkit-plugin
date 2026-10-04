@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JSON ↔ YAML — Dev Tools</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <a class="back-link" href="../index.html">← All tools</a>
+    <header class="site-header">
+      <div>
+        <h1 class="site-title"><span class="logo">🔄</span> JSON ↔ YAML</h1>
+        <p class="subtitle">Convert data between JSON and YAML.</p>
+      </div>
+    </header>
+
+    <div class="panel">
+      <div class="row">
+        <div class="col">
+          <label class="field-label" for="input">Input</label>
+          <textarea id="input" placeholder="Paste JSON or YAML here…"></textarea>
+        </div>
+        <div class="col">
+          <label class="field-label" for="output">Output</label>
+          <textarea id="output" readonly placeholder="Result appears here…"></textarea>
+        </div>
+      </div>
+      <div class="btn-row">
+        <button class="btn" id="toYaml">JSON → YAML</button>
+        <button class="btn" id="toJson">YAML → JSON</button>
+        <button class="btn secondary" id="copyBtn">📋 Copy output</button>
+        <button class="btn secondary" id="clearBtn">Clear</button>
+      </div>
+      <div class="error" id="error"></div>
+      <div class="hint">Supports maps, lists, strings, numbers, booleans and null. Indentation-based YAML (2 spaces).</div>
+    </div>
+  </div>
+
+  <script src="common.js"></script>
+  <script src="json-yaml.js"></script>
+</body>
+</html>
