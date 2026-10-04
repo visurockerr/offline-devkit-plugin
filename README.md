@@ -6,6 +6,19 @@ A handy browser toolbox of everyday developer utilities, all in one popup. No si
 
 ---
 
+## Getting started
+
+Follow these steps to get DevKit running in Microsoft Edge:
+
+1. **Get the files** — Download or clone this repository to a folder you'll keep (Edge loads the extension from this folder, so don't delete it later).
+2. **Open the extensions page** — In Edge, type **`edge://extensions`** into the address bar and press Enter.
+3. **Enable Developer mode** — Turn on the **Developer mode** toggle in the bottom-left corner.
+4. **Load the extension** — Click **Load unpacked**, then select the project folder that contains `manifest.json`.
+5. **Pin it (optional)** — Click the **Extensions** (puzzle piece) icon in the toolbar, find **DevKit**, and click the **pin** icon for one-click access.
+6. **Start using it** — Click the **DevKit** icon, pick a tool, and go. No accounts, no configuration, no internet needed.
+
+> Detailed instructions for each step are in the sections below.
+
 ## Features
 
 | Tool | What it does |
@@ -59,6 +72,17 @@ DevKit is loaded as an **unpacked extension** (developer mode). This is the stan
 1. Click the **Extensions** (puzzle piece) icon in the Edge toolbar.
 2. Find **DevKit** and click the **pin** icon next to it.
 3. The DevKit icon stays visible in your toolbar for one-click access.
+---
+
+### No install? Just open it in your browser
+
+You don't have to load the extension at all. Because every tool is a plain local HTML page, you can run the whole toolbox straight from the files:
+
+1. Go to the project folder on your computer.
+2. Open **`dev-tools/index.html`** in any browser (double-click it, or drag it into a browser window).
+3. The DevKit tool grid opens as a normal web page — pick a tool and use it right there.
+
+This works fully offline, with no extension and no setup.
 
 ---
 
