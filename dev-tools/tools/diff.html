@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diff / Text Compare — Dev Tools</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <a class="back-link" href="../index.html">← All tools</a>
+    <header class="site-header">
+      <div>
+        <h1 class="site-title"><span class="logo">🔀</span> Diff / Text Compare</h1>
+        <p class="subtitle">Compare two blocks of text or code side by side.</p>
+      </div>
+    </header>
+
+    <div class="panel">
+      <div class="row">
+        <div class="col">
+          <label class="field-label" for="left">Original</label>
+          <textarea id="left" placeholder="Paste the first version here…"></textarea>
+        </div>
+        <div class="col">
+          <label class="field-label" for="right">Changed</label>
+          <textarea id="right" placeholder="Paste the second version here…"></textarea>
+        </div>
+      </div>
+      <div class="checkbox-row">
+        <input type="checkbox" id="ignoreWs" />
+        <label for="ignoreWs">Ignore leading/trailing whitespace</label>
+      </div>
+      <div class="btn-row">
+        <button class="btn" id="compareBtn">Compare</button>
+        <button class="btn secondary" id="clearBtn">Clear</button>
+      </div>
+    </div>
+
+    <div class="panel">
+      <label class="field-label">Result</label>
+      <div class="hint" id="summary"></div>
+      <div class="row">
+        <div class="col">
+          <div class="output" id="outLeft" style="font-size:13px;"></div>
+        </div>
+        <div class="col">
+          <div class="output" id="outRight" style="font-size:13px;"></div>
+        </div>
+      </div>
+      <div class="hint">
+        <span class="diff-line diff-removed" style="display:inline-block;">removed</span>
+        &nbsp;
+        <span class="diff-line diff-added" style="display:inline-block;">added</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="common.js"></script>
+  <script src="diff.js"></script>
+</body>
+</html>

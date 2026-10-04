@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevKit</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div>
+        <h1 class="site-title"><img class="logo-img" src="../icons/icon-48.png" alt="DevKit" /> DevKit</h1>
+        <p class="subtitle">A local toolbox for everyday development tasks.</p>
+      </div>
+    </header>
+
+    <input type="text" id="search" class="search-box" placeholder="Search tools…" autofocus />
+
+    <div class="tool-grid" id="grid">
+      <a class="tool-card" href="tools/url-encoder.html" data-name="url encoder decoder percent encode">
+        <div class="icon">🔗</div>
+        <h3>URL Encoder / Decoder</h3>
+        <p>Encode and decode URL components and query strings.</p>
+      </a>
+
+      <a class="tool-card" href="tools/uuid-generator.html" data-name="uuid guid generator unique id">
+        <div class="icon">🆔</div>
+        <h3>UUID Generator</h3>
+        <p>Generate v4 UUIDs, one or many at a time.</p>
+      </a>
+
+      <a class="tool-card" href="tools/branch-name.html" data-name="git branch name generator random">
+        <div class="icon">🌿</div>
+        <h3>Git Branch Name</h3>
+        <p>Generate random, readable git branch names.</p>
+      </a>
+
+      <a class="tool-card" href="tools/json-pretty.html" data-name="json pretty print format colors beautify">
+        <div class="icon">🎨</div>
+        <h3>JSON Pretty Print</h3>
+        <p>Format and colorize JSON for easy reading.</p>
+      </a>
+
+      <a class="tool-card" href="tools/diff.html" data-name="diff text compare side by side changes">
+        <div class="icon">🔀</div>
+        <h3>Diff / Text Compare</h3>
+        <p>Compare two blocks of text side by side.</p>
+      </a>
+
+      <a class="tool-card" href="tools/json-yaml.html" data-name="json yaml converter convert">
+        <div class="icon">🔄</div>
+        <h3>JSON ↔ YAML</h3>
+        <p>Convert between JSON and YAML formats.</p>
+      </a>
+
+      <a class="tool-card" href="tools/password.html" data-name="password generator random secure">
+        <div class="icon">🔑</div>
+        <h3>Password Generator</h3>
+        <p>Generate strong, customizable passwords.</p>
+      </a>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

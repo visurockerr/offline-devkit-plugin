@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Git Branch Name Generator — Dev Tools</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <a class="back-link" href="../index.html">← All tools</a>
+    <header class="site-header">
+      <div>
+        <h1 class="site-title"><span class="logo">🌿</span> Git Branch Name</h1>
+        <p class="subtitle">Generate random, readable git branch names.</p>
+      </div>
+    </header>
+
+    <div class="panel">
+      <div class="row">
+        <div class="col" style="flex:0 1 220px;">
+          <label class="field-label" for="type">Prefix</label>
+          <select id="type">
+            <option value="feature">feature</option>
+            <option value="fix">fix</option>
+            <option value="chore">chore</option>
+            <option value="hotfix">hotfix</option>
+            <option value="refactor">refactor</option>
+            <option value="docs">docs</option>
+            <option value="test">test</option>
+            <option value="">(none)</option>
+          </select>
+        </div>
+        <div class="col" style="flex:0 1 220px;">
+          <label class="field-label" for="sep">Separator</label>
+          <select id="sep">
+            <option value="-">hyphen ( - )</option>
+            <option value="_">underscore ( _ )</option>
+          </select>
+        </div>
+      </div>
+      <div class="checkbox-row">
+        <input type="checkbox" id="ticket" />
+        <label for="ticket">Add a random ticket id (e.g. JIRA-1234)</label>
+      </div>
+      <div class="btn-row">
+        <button class="btn" id="genBtn">Generate</button>
+        <button class="btn secondary" id="copyBtn">📋 Copy</button>
+      </div>
+    </div>
+
+    <div class="panel">
+      <label class="field-label">Branch name</label>
+      <div class="output mono-big" id="output"></div>
+      <div class="hint">Click Generate for a new one. Names are safe for git (lowercase, no spaces).</div>
+    </div>
+  </div>
+
+  <script src="common.js"></script>
+  <script src="branch-name.js"></script>
+</body>
+</html>

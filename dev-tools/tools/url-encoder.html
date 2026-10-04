@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>URL Encoder / Decoder — Dev Tools</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <div class="container">
+    <a class="back-link" href="../index.html">← All tools</a>
+    <header class="site-header">
+      <div>
+        <h1 class="site-title"><span class="logo">🔗</span> URL Encoder / Decoder</h1>
+        <p class="subtitle">Encode or decode URL components and query strings.</p>
+      </div>
+    </header>
+
+    <div class="panel">
+      <label class="field-label" for="input">Input</label>
+      <textarea id="input" placeholder="Type text or a URL here…"></textarea>
+      <div class="checkbox-row">
+        <input type="checkbox" id="component" checked />
+        <label for="component">Encode as URI component (encodes <code>&amp; = ? /</code> too)</label>
+      </div>
+      <div class="btn-row">
+        <button class="btn" id="encodeBtn">Encode →</button>
+        <button class="btn" id="decodeBtn">Decode →</button>
+        <button class="btn secondary" id="swapBtn">⇅ Use output as input</button>
+        <button class="btn secondary" id="clearBtn">Clear</button>
+      </div>
+    </div>
+
+    <div class="panel">
+      <label class="field-label">Output</label>
+      <div class="output" id="output"></div>
+      <div class="error" id="error"></div>
+      <div class="btn-row">
+        <button class="btn secondary" id="copyBtn">📋 Copy output</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="common.js"></script>
+  <script src="url-encoder.js"></script>
+</body>
+</html>
