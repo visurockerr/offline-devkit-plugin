@@ -6,6 +6,15 @@ A handy browser toolbox of everyday developer utilities, all in one popup. No si
 
 ---
 
+## Getting started
+
+There are two ways to run DevKit — pick whichever you prefer:
+
+- **No install (fastest)** — Open `dev-tools/index.html` in any browser and start using the tools. See [Open it in your browser](#option-a--open-it-in-your-browser).
+- **As an Edge extension** — Load it as an unpacked extension for one-click toolbar access. See [Install in Microsoft Edge](#option-b--install-in-microsoft-edge).
+
+Either way, you first need the files on your machine ([Download](#download)), and everything runs fully offline.
+
 ## Features
 
 | Tool | What it does |
@@ -44,9 +53,19 @@ The extension's `manifest.json` declares no `permissions` and no `host_permissio
 
 ---
 
-## Install in Microsoft Edge
+## Option A — Open it in your browser
 
-DevKit is loaded as an **unpacked extension** (developer mode). This is the standard way to run a local, offline extension that isn't published to a store.
+The fastest way to run DevKit. Because every tool is a plain local HTML page, no install is needed:
+
+1. Go to the project folder on your computer.
+2. Open **`dev-tools/index.html`** in any browser (double-click it, or drag it into a browser window).
+3. The DevKit tool grid opens as a normal web page — pick a tool and use it right there.
+
+---
+
+## Option B — Install in Microsoft Edge
+
+Load DevKit as an **unpacked extension** (developer mode) for one-click access from the toolbar. This is the standard way to run a local, offline extension that isn't published to a store.
 
 1. Open Edge and go to **`edge://extensions`** (type it into the address bar and press Enter).
 2. Turn on **Developer mode** using the toggle in the bottom-left corner.
@@ -60,15 +79,7 @@ DevKit is loaded as an **unpacked extension** (developer mode). This is the stan
 2. Find **DevKit** and click the **pin** icon next to it.
 3. The DevKit icon stays visible in your toolbar for one-click access.
 
----
-
-## Usage
-
-1. Click the **DevKit** icon in the toolbar.
-2. Pick a tool from the grid.
-3. Use the tool, then click **← Back** to choose another.
-
-That's it — no accounts, no configuration, no internet needed.
+Then click the **DevKit** icon any time, pick a tool from the grid, and use **← Back** to choose another.
 
 ---
 
